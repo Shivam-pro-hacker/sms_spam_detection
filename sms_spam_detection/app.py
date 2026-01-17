@@ -29,7 +29,7 @@ def clean_text(text):
     text = list(map(lambda x: port_stemmer.stem(x), text.split()))
     return " ".join(text)
 
-st.title('SMS Spam Classifier')
+st.title('SMS Spam Detection')
 
 input_sms = st.text_input("Enter the Message")
 
@@ -45,3 +45,4 @@ if st.button('Predict'):
             st.header("Spam")
         else:
             st.header("Not Spam")
+
